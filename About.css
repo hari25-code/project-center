@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('tec2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+    font-family: 'poppins',sans-serif;
+
+}
+
+.topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 99;
+}
+.head{
+    font-size: 1.3em;
+    color: whitesmoke;
+    user-select: none;
+    text-shadow: 50px;
+    font-weight: bolder;
+}
+.topnav a{
+    position: relative;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+.topnav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+.topnav a:hover::after{
+   transform-origin: left;
+   transform:scaleX(1) ;
+}
+.a{
+    text-decoration: none;
+    padding-right: 100px;
+}
+.btnLogin-popup{
+    width: 90px;
+    height: 50px;
+    background: transparent;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: whitesmoke;
+    font-weight: 500;
+    margin-left: -40px;
+    transition: .5s;
+}
+
+.btnLogin-popup:hover{
+    background-color: whitesmoke;
+    color:#778899;
+}
+.about{
+    position: absolute;
+    width: 600px;
+    height: 380px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 15px 50px rgpa(0,0,0,.2);
+    background:transparent;
+    backdrop-filter: blur(20px);
+}
+h1{
+    padding: 20px;
+    padding-right: 200px;
+    font-size: 33px;
+    color:  #2f4f4f;
+    font-weight: bold;
+}
+p{
+    line-height: 30px;
+    word-spacing: 8px;
+    color:  #2f4f4f;
+}
+.circle{
+    width: 200px;
+    height: 200px;
+    background: url(OIP\ \(7\).jpg);
+    border-radius: 50%;
+    float: left;
+    shape-outside: circle();
+    margin: 60px 30px 30px 0;
+}

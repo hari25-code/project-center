@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url('tec2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+    font-family: 'poppins',sans-serif;
+
+}
+
+.topbar{
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 99;
+}
+.head{
+    font-size: 1.3em;
+    color: whitesmoke;
+    user-select: none;
+    text-shadow: 50px;
+    font-weight: bolder;
+}
+.topnav a{
+    position: relative;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+.topnav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+.topnav a:hover::after{
+   transform-origin: left;
+   transform:scaleX(1) ;
+}
+.a{
+    text-decoration: none;
+    padding-right: 100px;
+}
+.btnLogin-popup{
+    width: 90px;
+    height: 50px;
+    background: transparent;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: whitesmoke;
+    font-weight: 500;
+    margin-left: -40px;
+    transition: .5s;
+}
+
+.btnLogin-popup:hover{
+    background-color: whitesmoke;
+    color:#778899;
+}
+.header{
+    position: absolute;
+    text-align: center;
+    width: 75%;
+    left:12%;
+    top:2rem;
+    padding-top: 40px;
+    color: whitesmoke;
+    margin-top: 40px;
+}
+.contact{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    min-height: 110vh;
+    color: #162938;
+}
+.contact section{
+    margin-top: 8vh;
+    margin-left: 20vh;
+}
+.contact-details{
+    margin-top: 7rem;
+    margin-right: 50px;
+}
+.contact-details section ion-icon{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(225,225,225,0.8);
+    color: #000;
+    text-align: center;
+}
+.right{
+    padding: 10px;
+    margin-top: 170px;
+    margin-left: 40px;
+}
+.contact-form{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: transparent;
+    border: 2px solid rgba(225, 225, 225, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    overflow: hidden
+
+
+}
+.form{
+    padding: 20PX;
+}
+
+.form .cont input{
+    width:70% ;    
+    background-color: transparent;
+    border: 10px;
+    border: transparent;
+    margin: 20px;
+    padding: 10px;
+    font-size: 10px;
+    border-bottom:2px solid #fff;
+}
+.form .cont input~span{
+    position: absolute;
+    left: 20px;
+    transition: 0.9s ease-in-out;
+    margin-top: 5px;
+}
+.form .cont input:focus~span{
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+.form .cont textarea{
+    width: 28rem;
+    border: 0;
+    background-color: transparent;
+    margin: 20px;
+    font-size: 10px;
+    border-bottom: 2px solid #fff;
+}
+.form .cont textarea~span{
+    position: absolute;
+    left: 20px;
+    margin-top: 5px;
+    transition: 0.9s ease-in-out;
+}
+.form .cont textarea:focus~span{
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+.form .cont input[type=submit]{
+    background-color: dodgerblue;
+    border: 2px solid dodgerblue;
+    font-size: 18px;
+    width: 50%;
+    height: 40px;
+    margin-top: -5px;  
+    border-radius: 10px;
+    margin-left:120px ;
+
+}
+.form .cont input[type=submit]:hover{
+    background-color: transparent;
+    color: dodgerblue;
+}
+.media{
+    position: absolute;
+    top: 85vh;
+    right: 20vh;
+    display: flex;
+    list-style: none;
+}
+.media li{
+    margin: 20px 30px;
+}
+
+/*responive*/
+
+@media screen and(max-width: 900px;){
+    body{
+        background-repeat: repeat-y;
+        overflow: auto;
+    }
+    header{
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 100%;
+    }
+    .empty{
+        height: 200vh;
+
+    }
+    .form{
+        position: absolute;
+        top: 100vh;
+        margin-left: 10%;
+    }
+    .cont{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:0;
+        margin-top: 53vh;
+        margin-left: 10vh;
+    }
+    .contact section{
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .media{
+        position: absolute;
+        top: 183vh;
+        right: 30px;
+    }
+}
+    
